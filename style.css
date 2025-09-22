@@ -8,4 +8,61 @@ body {
   background-repeat: no-repeat;
   color: white; /* makes text readable on a dark background */
   font-family: Arial, sans-serif;
+
+/* Basic Nav Bar */
+nav {
+  background-color: #333;
+  padding: 10px;
 }
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  position: relative; /* important for dropdown positioning */
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  display: block;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+  display: none; /* hidden by default */
+  position: absolute;
+  background-color: #444;
+  min-width: 160px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: 100%; /* position below the parent */
+  left: 0;
+  z-index: 1000;
+}
+
+.dropdown-content li a {
+  padding: 10px;
+  color: white;
+}
+
+.dropdown-content li a:hover {
+  background-color: #666;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
